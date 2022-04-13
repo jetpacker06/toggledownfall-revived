@@ -7,8 +7,6 @@ Package structure
 Resource namespaces
 mods.toml
 modmainclass.java beneath @Mod
-build.gradle:
-    archivesBaseName
-    group
+build.gradle: ctrl r stainless
 
 pack.mcmeta
