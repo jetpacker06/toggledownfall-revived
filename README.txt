@@ -1,9 +1,12 @@
 Clone me
 parchment is setup already
+jei is setup already
 things to change:
+
 Package structure
+Resource namespaces
 mods.toml
-emptymod.java beneath @Mod
-build.gradle:
-    archivesBaseName
-    ctrl r 'emptymod'
+modmainclass.java beneath @Mod
+build.gradle: ctrl r stainless
+
+pack.mcmeta
