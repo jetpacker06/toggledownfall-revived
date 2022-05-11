@@ -1,25 +1,23 @@
-package com.jetpacker06.modpackage;
+package com.jetpacker06.toggledownfallrevived;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
-@Mod("emptymod")
-public class ModMainClass {
-    public static final String MOD_ID = "emptymod";
-    // Directly reference a log4j logger.
+@Mod("toggledownfallrevived")
+public class ToggledownfallRevived {
+    public static final String MOD_ID = "toggledownfallrevived";
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public ModMainClass() {
-        // Register the setup method for modloading
+    public ToggledownfallRevived() {
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
 
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
