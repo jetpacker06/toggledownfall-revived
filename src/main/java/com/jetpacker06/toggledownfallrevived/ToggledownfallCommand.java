@@ -15,15 +15,13 @@ public class ToggledownfallCommand {
         dispatcher.register(Commands.literal("toggledownfall").executes(
 
                 (command) -> {
-                    Level pLevel = command.getSource().getLevel();
+                    ServerLevel pLevel = command.getSource().getLevel();
                     ServerPlayer pPlayer = (ServerPlayer) command.getSource().getPlayerOrException();
-                    // if (pLevel instanceof ServerLevel) {
-                        if (pLevel.getLevelData().isRaining()) {
-                            WeatherCommand.setClear(pPlayer.createCommandSourceStack().withLevel((ServerLevel) pLevel), 6000);
-                        } else {
-                            WeatherCommand.setRain(pPlayer.createCommandSourceStack().withLevel((ServerLevel) pLevel), 6000);
-                        }
-                   // }
+                    if (pLevel.getLevelData().isRaining()) {
+                        WeatherCommand.setClear(pPlayer.createCommandSourceStack().withLevel(pLevel), 6000);
+                    } else {
+                        WeatherCommand.setRain(pPlayer.createCommandSourceStack().withLevel(pLevel), 6000);
+                    }
                     return 1;
                 }
         ));
