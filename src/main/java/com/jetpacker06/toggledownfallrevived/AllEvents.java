@@ -1,7 +1,6 @@
 package com.jetpacker06.toggledownfallrevived;
 
 import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
